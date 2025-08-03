@@ -1,0 +1,18 @@
+[project]
+name = "jemma"
+version = "0.1.0"
+authors = [{ name = "antodima", email = "antonio.di.mauro.23@gmail.com" }]
+description = "Jemma"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "datasets>=4.0.0",
+    "dotenv>=0.9.9",
+    "hf-transfer>=0.1.9",
+    "ipykernel>=6.30.0",
+    "ipywidgets>=8.1.7",
+    "lightning>=2.5.2",
+    "litgpt[all]>=0.5.9",
+    "python-dotenv>=1.1.1",
+    "torch>=2.7.1",
+]
