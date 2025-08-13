@@ -1,0 +1,102 @@
+[
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "I need a big, friendly 'Get Started' button. It should be a welcoming blue color with white text and have soft, rounded corners.",
+        "output": "{\n  \"component\": \"button\",\n  \"label\": \"Get Started\",\n  \"style\": {\n    \"backgroundColor\": \"#3498db\",\n    \"color\": \"#ffffff\",\n    \"borderRadius\": \"8px\",\n    \"padding\": \"12px 24px\",\n    \"border\": \"none\",\n    \"fontSize\": \"18px\",\n    \"fontWeight\": \"bold\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A simple text box for a user's name. Just a clean, light grey box with a thin border and a placeholder that says 'Your full name'.",
+        "output": "{\n  \"component\": \"input\",\n  \"type\": \"text\",\n  \"placeholder\": \"Your full name\",\n  \"style\": {\n    \"backgroundColor\": \"#f8f9f9\",\n    \"border\": \"1px solid #dadedf\",\n    \"borderRadius\": \"4px\",\n    \"padding\": \"10px\",\n    \"fontSize\": \"16px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A card to show a blog post preview. It should be white with a very subtle shadow to make it pop, and have nicely rounded edges.",
+        "output": "{\n  \"component\": \"card\",\n  \"style\": {\n    \"backgroundColor\": \"#ffffff\",\n    \"borderRadius\": \"12px\",\n    \"boxShadow\": \"0 4px 12px rgba(0, 0, 0, 0.08)\",\n    \"padding\": \"20px\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A success message that says 'Your message has been sent!'. Make it green to show everything went well.",
+        "output": "{\n  \"component\": \"alert\",\n  \"state\": \"success\",\n  \"content\": \"Your message has been sent!\",\n  \"style\": {\n    \"backgroundColor\": \"#D4EDDA\",\n    \"color\": \"#155724\",\n    \"border\": \"1px solid #C3E6CB\",\n    \"borderRadius\": \"5px\",\n    \"padding\": \"15px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "The main header for the website. It should have a clean, white background and a simple line underneath to separate it from the content.",
+        "output": "{\n  \"component\": \"header\",\n  \"style\": {\n    \"backgroundColor\": \"#ffffff\",\n    \"padding\": \"16px 32px\",\n    \"borderBottom\": \"1px solid #eeeeee\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A toggle for turning on 'Dark Mode'. When it's on, it should be a cool dark grey.",
+        "output": "{\n  \"component\": \"toggle\",\n  \"label\": \"Dark Mode\",\n  \"state\": \"on\",\n  \"style\": {\n    \"trackColor\": \"#5D6D7E\",\n    \"thumbColor\": \"#ffffff\",\n    \"width\": \"50px\",\n    \"height\": \"28px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A search bar for the top of the page. It needs a little magnifying glass icon inside it and should be oval-shaped.",
+        "output": "{\n  \"component\": \"input\",\n  \"type\": \"search\",\n  \"placeholder\": \"Search...\",\n  \"style\": {\n    \"backgroundColor\": \"#f1f3f4\",\n    \"border\": \"none\",\n    \"borderRadius\": \"25px\",\n    \"padding\": \"10px 20px 10px 40px\",\n    \"fontSize\": \"16px\"\n  },\n  \"icon\": {\n    \"name\": \"search\",\n    \"position\": \"left\",\n    \"color\": \"#5f6368\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A dangerous 'Delete Account' button. It should be bright red to warn the user.",
+        "output": "{\n  \"component\": \"button\",\n  \"label\": \"Delete Account\",\n  \"style\": {\n    \"backgroundColor\": \"#e74c3c\",\n    \"color\": \"#ffffff\",\n    \"borderRadius\": \"6px\",\n    \"padding\": \"10px 20px\",\n    \"border\": \"none\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A warning message for when a password is weak. It should be yellow or orange.",
+        "output": "{\n  \"component\": \"alert\",\n  \"state\": \"warning\",\n  \"content\": \"This password is too weak. Please choose a stronger one.\",\n  \"style\": {\n    \"backgroundColor\": \"#FFF3CD\",\n    \"color\": \"#856404\",\n    \"border\": \"1px solid #FFEEBA\",\n    \"borderRadius\": \"5px\",\n    \"padding\": \"15px\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A simple checkbox with the label 'I agree to the terms'.",
+        "output": "{\n  \"component\": \"checkbox\",\n  \"label\": \"I agree to the terms\",\n  \"style\": {\n    \"boxColor\": \"#ffffff\",\n    \"borderColor\": \"#adb5bd\",\n    \"checkColor\": \"#3498db\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A circular user avatar. If there's no picture, just show the initials 'JD' in the middle with a nice purple background.",
+        "output": "{\n  \"component\": \"avatar\",\n  \"initials\": \"JD\",\n  \"style\": {\n    \"backgroundColor\": \"#8e44ad\",\n    \"color\": \"#ffffff\",\n    \"borderRadius\": \"50%\",\n    \"width\": \"48px\",\n    \"height\": \"48px\",\n    \"fontSize\": \"18px\",\n    \"fontWeight\": \"bold\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A dropdown menu to select a country. It should look like a standard input field but with a little arrow pointing down on the right.",
+        "output": "{\n  \"component\": \"select\",\n  \"defaultOption\": \"Select a country...\",\n  \"style\": {\n    \"backgroundColor\": \"#ffffff\",\n    \"border\": \"1px solid #ced4da\",\n    \"borderRadius\": \"4px\",\n    \"padding\": \"10px\"\n  },\n  \"icon\": {\n    \"name\": \"chevron-down\",\n    \"position\": \"right\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A popup window to confirm an action. It should have a title 'Are you sure?' and sit in the middle of the screen with a faded background behind it.",
+        "output": "{\n  \"component\": \"modal\",\n  \"title\": \"Are you sure?\",\n  \"style\": {\n    \"backgroundColor\": \"#ffffff\",\n    \"borderRadius\": \"10px\",\n    \"boxShadow\": \"0 5px 15px rgba(0,0,0,0.3)\"\n  },\n  \"overlayStyle\": {\n    \"backgroundColor\": \"rgba(0, 0, 0, 0.5)\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A loading indicator. Just a simple spinning circle, maybe blue.",
+        "output": "{\n  \"component\": \"spinner\",\n  \"style\": {\n    \"color\": \"#3498db\",\n    \"size\": \"40px\",\n    \"thickness\": \"4px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A less important button, like a 'Cancel' button. It should be subtle, maybe just grey text on a transparent background with a light grey border.",
+        "output": "{\n  \"component\": \"button\",\n  \"type\": \"secondary\",\n  \"label\": \"Cancel\",\n  \"style\": {\n    \"backgroundColor\": \"transparent\",\n    \"color\": \"#5D6D7E\",\n    \"borderRadius\": \"8px\",\n    \"padding\": \"12px 24px\",\n    \"border\": \"1px solid #E5E7E9\",\n    \"fontSize\": \"18px\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A slider to control volume, from 0 to 100. The bar should be light grey, and the part that's filled in should be blue.",
+        "output": "{\n  \"component\": \"slider\",\n  \"min\": 0,\n  \"max\": 100,\n  \"defaultValue\": 50,\n  \"style\": {\n    \"trackColor\": \"#e9ecef\",\n    \"fillColor\": \"#3498db\",\n    \"thumbColor\": \"#ffffff\",\n    \"thumbBorder\": \"2px solid #3498db\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A progress bar showing a file upload is 75% complete. It should be a horizontal bar, mostly filled with a green color.",
+        "output": "{\n  \"component\": \"progress_bar\",\n  \"percentage\": 75,\n  \"style\": {\n    \"backgroundColor\": \"#e9ecef\",\n    \"fillColor\": \"#28a745\",\n    \"height\": \"12px\",\n    \"borderRadius\": \"6px\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A password field that has an icon of an eye so you can show or hide the password.",
+        "output": "{\n  \"component\": \"input\",\n  \"type\": \"password\",\n  \"placeholder\": \"Enter password\",\n  \"style\": {\n    \"backgroundColor\": \"#f8f9f9\",\n    \"border\": \"1px solid #dadedf\",\n    \"borderRadius\": \"4px\",\n    \"padding\": \"10px\"\n  },\n  \"icon\": {\n    \"name\": \"eye\",\n    \"position\": \"right\",\n    \"toggleable\": true\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A little help icon (a question mark in a circle) that shows a helpful tip when you hover over it.",
+        "output": "{\n  \"component\": \"tooltip\",\n  \"trigger\": \"icon\",\n  \"iconName\": \"question-circle\",\n  \"text\": \"This is a helpful tip!\",\n  \"style\": {\n    \"backgroundColor\": \"#34495e\",\n    \"color\": \"#ffffff\",\n    \"borderRadius\": \"4px\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "The footer for the bottom of the page. Just a simple, dark grey area with some light-colored text for copyright info.",
+        "output": "{\n  \"component\": \"footer\",\n  \"text\": \"© 2025 Your Company, Inc.\",\n  \"style\": {\n    \"backgroundColor\": \"#343a40\",\n    \"color\": \"#adb5bd\",\n    \"padding\": \"20px\",\n    \"textAlign\": \"center\"\n  }\n}"
+    }
+]
