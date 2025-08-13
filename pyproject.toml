@@ -1,8 +1,8 @@
 [project]
-name = "jemma"
+name = "jsonfarmer"
 version = "0.1.0"
 authors = [{ name = "antodima", email = "antonio.di.mauro.23@gmail.com" }]
-description = "Jemma"
+description = "Jsonfarmer"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -13,6 +13,7 @@ dependencies = [
     "ipywidgets>=8.1.7",
     "lightning>=2.5.2",
     "litgpt[all]>=0.5.9",
+    "numpy>=1.26.4",
     "python-dotenv>=1.1.1",
     "torch>=2.7.1",
 ]
