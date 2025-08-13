@@ -10,6 +10,7 @@ wheels/
 checkpoints/
 data/
 lightning_logs/
+.DS_Store
 
 # Virtual environments
 .venv
