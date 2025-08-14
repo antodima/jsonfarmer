@@ -528,6 +528,7 @@ dependencies = [
     { name = "numpy" },
     { name = "python-dotenv" },
     { name = "torch" },
+    { name = "torchmetrics" },
 ]
 
 [package.metadata]
@@ -542,6 +543,7 @@ requires-dist = [
     { name = "numpy", specifier = ">=1.26.4" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "torch", specifier = ">=2.7.1" },
+    { name = "torchmetrics", specifier = ">=1.8.1" },
 ]
 
 [[package]]

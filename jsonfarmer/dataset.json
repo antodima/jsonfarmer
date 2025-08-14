@@ -98,5 +98,390 @@
         "instruction": "Convert the following natural language description of a UI component into a JSON object.",
         "input": "The footer for the bottom of the page. Just a simple, dark grey area with some light-colored text for copyright info.",
         "output": "{\n  \"component\": \"footer\",\n  \"text\": \"© 2025 Your Company, Inc.\",\n  \"style\": {\n    \"backgroundColor\": \"#343a40\",\n    \"color\": \"#adb5bd\",\n    \"padding\": \"20px\",\n    \"textAlign\": \"center\"\n  }\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "A text area for user comments, with a placeholder 'Leave a comment...'. It should allow for multiple lines of text.",
+        "output": "{\n  \"component\": \"textarea\",\n  \"placeholder\": \"Leave a comment...\",\n  \"style\": {\n    \"backgroundColor\": \"#ffffff\",\n    \"border\": \"1px solid #ced4da\",\n    \"borderRadius\": \"4px\",\n    \"padding\": \"10px\",\n    \"minHeight\": \"120px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "A disabled button that says 'Submitting...'. It should be greyed out and not clickable.",
+        "output": "{\n  \"component\": \"button\",\n  \"label\": \"Submitting...\",\n  \"state\": \"disabled\",\n  \"style\": {\n    \"backgroundColor\": \"#e9ecef\",\n    \"color\": \"#6c757d\",\n    \"borderRadius\": \"8px\",\n    \"padding\": \"12px 24px\",\n    \"border\": \"none\",\n    \"cursor\": \"not-allowed\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "An info alert. It should be blue and say 'This is an informational message.'",
+        "output": "{\n  \"component\": \"alert\",\n  \"state\": \"info\",\n  \"content\": \"This is an informational message.\",\n  \"style\": {\n    \"backgroundColor\": \"#cce5ff\",\n    \"color\": \"#004085\",\n    \"border\": \"1px solid #b8daff\",\n    \"borderRadius\": \"5px\",\n    \"padding\": \"15px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A set of tabs for 'Profile', 'Settings', and 'Billing'. The active tab should be underlined.",
+        "output": "{\n  \"component\": \"tabs\",\n  \"tabs\": [\"Profile\", \"Settings\", \"Billing\"],\n  \"activeTab\": \"Profile\",\n  \"style\": {\n    \"inactive\": {\n      \"color\": \"#6c757d\"\n    },\n    \"active\": {\n      \"color\": \"#007bff\",\n      \"borderBottom\": \"2px solid #007bff\"\n    }\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A navigation bar at the top with a logo on the left and links for 'Home', 'About', and 'Contact' on the right.",
+        "output": "{\n  \"component\": \"navbar\",\n  \"logo\": {\n    \"type\": \"image\",\n    \"src\": \"/logo.png\"\n  },\n  \"links\": [\"Home\", \"About\", \"Contact\"],\n  \"style\": {\n    \"backgroundColor\": \"#ffffff\",\n    \"boxShadow\": \"0 2px 4px rgba(0,0,0,0.1)\",\n    \"padding\": \"10px 40px\",\n    \"display\": \"flex\",\n    \"justifyContent\": \"space-between\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A breadcrumb navigation showing the path: Home > Products > Laptops.",
+        "output": "{\n  \"component\": \"breadcrumbs\",\n  \"path\": [\"Home\", \"Products\", \"Laptops\"],\n  \"style\": {\n    \"separator\": \">\",\n    \"fontSize\": \"14px\",\n    \"color\": \"#6c757d\"\n  }\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "Pagination controls for a list of items. Show page numbers 1 through 5, with '3' being the current page.",
+        "output": "{\n  \"component\": \"pagination\",\n  \"totalPages\": 5,\n  \"currentPage\": 3,\n  \"style\": {\n    \"button\": {\n      \"padding\": \"8px 12px\",\n      \"margin\": \"0 2px\"\n    },\n    \"activeButton\": {\n      \"backgroundColor\": \"#007bff\",\n      \"color\": \"#ffffff\",\n      \"border\": \"1px solid #007bff\"\n    }\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "A small red notification badge with the number '3' in it, attached to a bell icon.",
+        "output": "{\n  \"component\": \"badge\",\n  \"count\": 3,\n  \"attachedTo\": \"bell-icon\",\n  \"style\": {\n    \"backgroundColor\": \"#dc3545\",\n    \"color\": \"#ffffff\",\n    \"borderRadius\": \"50%\",\n    \"width\": \"20px\",\n    \"height\": \"20px\",\n    \"fontSize\": \"12px\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "A simple horizontal line to separate sections of a page.",
+        "output": "{\n  \"component\": \"divider\",\n  \"style\": {\n    \"height\": \"1px\",\n    \"backgroundColor\": \"#dee2e6\",\n    \"margin\": \"20px 0\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A file upload area. It should be a dashed box with text saying 'Drag and drop files here, or click to browse'.",
+        "output": "{\n  \"component\": \"file_uploader\",\n  \"text\": \"Drag and drop files here, or click to browse\",\n  \"style\": {\n    \"border\": \"2px dashed #007bff\",\n    \"borderRadius\": \"8px\",\n    \"padding\": \"40px\",\n    \"textAlign\": \"center\",\n    \"backgroundColor\": \"#f8f9fa\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A radio button group for selecting a plan: 'Basic', 'Pro', 'Enterprise'. 'Pro' should be selected by default.",
+        "output": "{\n  \"component\": \"radio_group\",\n  \"options\": [\"Basic\", \"Pro\", \"Enterprise\"],\n  \"defaultSelection\": \"Pro\",\n  \"style\": {\n    \"margin\": \"10px 0\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A sidebar menu for a dashboard. It should be dark, with icons and text for 'Dashboard', 'Analytics', and 'Users'.",
+        "output": "{\n  \"component\": \"sidebar\",\n  \"items\": [\n    { \"text\": \"Dashboard\", \"icon\": \"home\" },\n    { \"text\": \"Analytics\", \"icon\": \"chart-bar\" },\n    { \"text\": \"Users\", \"icon\": \"users\" }\n  ],\n  \"style\": {\n    \"backgroundColor\": \"#343a40\",\n    \"color\": \"#f8f9fa\",\n    \"width\": \"250px\"\n  }\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "A link button that looks like a normal hyperlink but is styled like a button. Label it 'Learn More'.",
+        "output": "{\n  \"component\": \"button\",\n  \"type\": \"link\",\n  \"label\": \"Learn More\",\n  \"style\": {\n    \"backgroundColor\": \"transparent\",\n    \"color\": \"#007bff\",\n    \"border\": \"none\",\n    \"textDecoration\": \"underline\",\n    \"padding\": \"0\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "An accordion component. The first section 'Getting Started' should be open, showing its content.",
+        "output": "{\n  \"component\": \"accordion\",\n  \"sections\": [\n    { \"title\": \"Getting Started\", \"content\": \"...\", \"isOpen\": true },\n    { \"title\": \"Advanced Features\", \"content\": \"...\", \"isOpen\": false }\n  ],\n  \"style\": {\n    \"border\": \"1px solid #dee2e6\",\n    \"borderRadius\": \"4px\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "An input field for entering a hex color code, like #FF5733.",
+        "output": "{\n  \"component\": \"input\",\n  \"type\": \"text\",\n  \"label\": \"Color Code\",\n  \"placeholder\": \"#FF5733\",\n  \"style\": {\n    \"fontFamily\": \"monospace\",\n    \"border\": \"1px solid #ced4da\",\n    \"padding\": \"8px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A toast notification that slides in from the bottom right to say 'Item added to cart'.",
+        "output": "{\n  \"component\": \"toast\",\n  \"content\": \"Item added to cart\",\n  \"position\": \"bottom-right\",\n  \"style\": {\n    \"backgroundColor\": \"#333\",\n    \"color\": \"#fff\",\n    \"borderRadius\": \"6px\",\n    \"padding\": \"16px\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A very minimalist button. No background, just blue text and a border. It should say 'View Details'.",
+        "output": "{\n  \"component\": \"button\",\n  \"type\": \"outline\",\n  \"label\": \"View Details\",\n  \"style\": {\n    \"backgroundColor\": \"#ffffff\",\n    \"color\": \"#007bff\",\n    \"border\": \"1px solid #007bff\",\n    \"borderRadius\": \"4px\",\n    \"padding\": \"10px 15px\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A large hero section for a homepage with a title 'Welcome to Our Site' and a subtitle below it.",
+        "output": "{\n  \"component\": \"hero\",\n  \"title\": \"Welcome to Our Site\",\n  \"subtitle\": \"Discover amazing features and services.\",\n  \"style\": {\n    \"backgroundColor\": \"#f8f9fa\",\n    \"padding\": \"80px 0\",\n    \"textAlign\": \"center\"\n  }\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "A date picker input field.",
+        "output": "{\n  \"component\": \"input\",\n  \"type\": \"date\",\n  \"label\": \"Select Date\",\n  \"style\": {\n    \"border\": \"1px solid #ced4da\",\n    \"borderRadius\": \"4px\",\n    \"padding\": \"10px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "A tag cloud with tags like 'React', 'JavaScript', 'CSS', 'HTML'. 'React' should be the biggest.",
+        "output": "{\n  \"component\": \"tag_cloud\",\n  \"tags\": [\n    { \"text\": \"React\", \"weight\": 10 },\n    { \"text\": \"JavaScript\", \"weight\": 8 },\n    { \"text\": \"CSS\", \"weight\": 6 },\n    { \"text\": \"HTML\", \"weight\": 6 }\n  ],\n  \"style\": {\n    \"baseFontSize\": \"14px\",\n    \"maxFontSize\": \"32px\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "A button that is currently in a loading state, showing a spinner instead of text.",
+        "output": "{\n  \"component\": \"button\",\n  \"state\": \"loading\",\n  \"style\": {\n    \"backgroundColor\": \"#007bff\",\n    \"padding\": \"12px 24px\",\n    \"borderRadius\": \"8px\",\n    \"minWidth\": \"120px\"\n  },\n  \"spinner\": {\n    \"color\": \"#ffffff\",\n    \"size\": \"20px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A card with a header, a body, and a footer section.",
+        "output": "{\n  \"component\": \"card\",\n  \"sections\": [\"header\", \"body\", \"footer\"],\n  \"style\": {\n    \"backgroundColor\": \"#ffffff\",\n    \"border\": \"1px solid #e0e0e0\",\n    \"borderRadius\": \"8px\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A simple list of items: 'Apple', 'Banana', 'Cherry'.",
+        "output": "{\n  \"component\": \"list\",\n  \"type\": \"unordered\",\n  \"items\": [\"Apple\", \"Banana\", \"Cherry\"],\n  \"style\": {\n    \"listStyleType\": \"disc\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "An input field with an error message below it saying 'This field is required'. The border should be red.",
+        "output": "{\n  \"component\": \"input\",\n  \"type\": \"text\",\n  \"state\": \"error\",\n  \"style\": {\n    \"border\": \"1px solid #dc3545\",\n    \"borderRadius\": \"4px\",\n    \"padding\": \"10px\"\n  },\n  \"errorMessage\": \"This field is required\"\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "A 'pill' or 'tag' element with the text 'New Feature' inside. It should have a green background and rounded ends.",
+        "output": "{\n  \"component\": \"pill\",\n  \"text\": \"New Feature\",\n  \"style\": {\n    \"backgroundColor\": \"#28a745\",\n    \"color\": \"#ffffff\",\n    \"borderRadius\": \"20px\",\n    \"padding\": \"4px 12px\",\n    \"fontSize\": \"12px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "A table with columns for 'Name', 'Email', and 'Role'.",
+        "output": "{\n  \"component\": \"table\",\n  \"headers\": [\"Name\", \"Email\", \"Role\"],\n  \"style\": {\n    \"width\": \"100%\",\n    \"borderCollapse\": \"collapse\"\n  },\n  \"headerStyle\": {\n    \"backgroundColor\": \"#f8f9fa\",\n    \"textAlign\": \"left\",\n    \"padding\": \"12px\"\n  },\n  \"rowStyle\": {\n    \"borderBottom\": \"1px solid #dee2e6\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "A search input that shows suggestions as you type.",
+        "output": "{\n  \"component\": \"input\",\n  \"type\": \"search\",\n  \"placeholder\": \"Search...\",\n  \"features\": [\"autocomplete\"],\n  \"style\": {\n    \"border\": \"1px solid #ced4da\",\n    \"padding\": \"10px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A button with an icon on the left of the text. The icon should be a plus sign and the text 'Add Item'.",
+        "output": "{\n  \"component\": \"button\",\n  \"label\": \"Add Item\",\n  \"icon\": {\n    \"name\": \"plus\",\n    \"position\": \"left\"\n  },\n  \"style\": {\n    \"backgroundColor\": \"#28a745\",\n    \"color\": \"#ffffff\",\n    \"padding\": \"10px 15px\",\n    \"borderRadius\": \"6px\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A modal dialog that is extra large for showing detailed content.",
+        "output": "{\n  \"component\": \"modal\",\n  \"size\": \"extra-large\",\n  \"title\": \"Details\",\n  \"style\": {\n    \"backgroundColor\": \"#ffffff\",\n    \"borderRadius\": \"8px\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A stepper component showing steps 'Step 1', 'Step 2', 'Step 3'. The current step is 'Step 2'.",
+        "output": "{\n  \"component\": \"stepper\",\n  \"steps\": [\"Step 1\", \"Step 2\", \"Step 3\"],\n  \"currentStep\": 2,\n  \"style\": {\n    \"activeColor\": \"#007bff\",\n    \"inactiveColor\": \"#ced4da\"\n  }\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "A kbd element to show a keyboard shortcut, like 'Ctrl + C'.",
+        "output": "{\n  \"component\": \"kbd\",\n  \"shortcut\": \"Ctrl + C\",\n  \"style\": {\n    \"backgroundColor\": \"#f8f9fa\",\n    \"border\": \"1px solid #ced4da\",\n    \"borderRadius\": \"3px\",\n    \"padding\": \"2px 6px\",\n    \"fontFamily\": \"monospace\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "A 'ghost' button, which is completely transparent until you hover over it.",
+        "output": "{\n  \"component\": \"button\",\n  \"type\": \"ghost\",\n  \"label\": \"Actions\",\n  \"style\": {\n    \"backgroundColor\": \"transparent\",\n    \"color\": \"#6c757d\",\n    \"border\": \"none\"\n  },\n  \"hoverStyle\": {\n    \"backgroundColor\": \"#f8f9fa\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "A rating component using stars, showing 3.5 out of 5 stars.",
+        "output": "{\n  \"component\": \"rating\",\n  \"maxRating\": 5,\n  \"currentRating\": 3.5,\n  \"icon\": \"star\",\n  \"style\": {\n    \"filledColor\": \"#ffc107\",\n    \"emptyColor\": \"#e9ecef\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "An image carousel with three images and dots at the bottom for navigation.",
+        "output": "{\n  \"component\": \"carousel\",\n  \"images\": [\"/img1.jpg\", \"/img2.jpg\", \"/img3.jpg\"],\n  \"navigation\": \"dots\",\n  \"style\": {\n    \"width\": \"100%\",\n    \"height\": \"400px\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A login form with fields for 'Email' and 'Password', and a 'Log In' button.",
+        "output": "{\n  \"component\": \"form\",\n  \"name\": \"login\",\n  \"fields\": [\n    { \"component\": \"input\", \"type\": \"email\", \"label\": \"Email\" },\n    { \"component\": \"input\", \"type\": \"password\", \"label\": \"Password\" }\n  ],\n  \"submitButton\": {\n    \"component\": \"button\",\n    \"label\": \"Log In\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A timeline view showing events from '9:00 AM', '10:30 AM', and '1:00 PM'.",
+        "output": "{\n  \"component\": \"timeline\",\n  \"events\": [\n    { \"time\": \"9:00 AM\", \"description\": \"Morning Standup\" },\n    { \"time\": \"10:30 AM\", \"description\": \"Design Review\" },\n    { \"time\": \"1:00 PM\", \"description\": \"Lunch\" }\n  ],\n  \"style\": {\n    \"lineColor\": \"#dee2e6\",\n    \"dotColor\": \"#007bff\"\n  }\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "A button with a gradient from blue to purple. Label it 'Upgrade'.",
+        "output": "{\n  \"component\": \"button\",\n  \"label\": \"Upgrade\",\n  \"style\": {\n    \"background\": \"linear-gradient(to right, #3498db, #8e44ad)\",\n    \"color\": \"#ffffff\",\n    \"border\": \"none\",\n    \"padding\": \"15px 30px\",\n    \"borderRadius\": \"50px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "A blockquote for quoting someone. It should have a vertical line on the left.",
+        "output": "{\n  \"component\": \"blockquote\",\n  \"text\": \"The only way to do great work is to love what you do.\",\n  \"citation\": \"Steve Jobs\",\n  \"style\": {\n    \"borderLeft\": \"4px solid #ced4da\",\n    \"paddingLeft\": \"20px\",\n    \"margin\": \"20px 0\",\n    \"color\": \"#6c757d\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "A 'chip' component that can be deleted. It says 'Filter: Active' and has a small 'x' icon.",
+        "output": "{\n  \"component\": \"chip\",\n  \"label\": \"Filter: Active\",\n  \"isDeletable\": true,\n  \"style\": {\n    \"backgroundColor\": \"#e9ecef\",\n    \"color\": \"#495057\",\n    \"borderRadius\": \"16px\",\n    \"padding\": \"8px 12px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A calendar view for the month of August 2025.",
+        "output": "{\n  \"component\": \"calendar\",\n  \"month\": \"August\",\n  \"year\": 2025,\n  \"style\": {\n    \"headerColor\": \"#007bff\",\n    \"dayOfWeekColor\": \"#6c757d\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A container with a fixed aspect ratio of 16:9, for embedding videos.",
+        "output": "{\n  \"component\": \"container\",\n  \"purpose\": \"video-embed\",\n  \"style\": {\n    \"aspectRatio\": \"16 / 9\",\n    \"backgroundColor\": \"#000000\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A very simple, unstyled button that just inherits the text color.",
+        "output": "{\n  \"component\": \"button\",\n  \"type\": \"unstyled\",\n  \"label\": \"Action\",\n  \"style\": {\n    \"background\": \"none\",\n    \"border\": \"none\",\n    \"padding\": \"0\",\n    \"color\": \"inherit\",\n    \"font\": \"inherit\"\n  }\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "A 'fat' footer with multiple columns for links: 'Company', 'Products', 'Legal'.",
+        "output": "{\n  \"component\": \"footer\",\n  \"layout\": \"multi-column\",\n  \"columns\": [\n    { \"title\": \"Company\", \"links\": [\"About Us\", \"Careers\"] },\n    { \"title\": \"Products\", \"links\": [\"Features\", \"Pricing\"] },\n    { \"title\": \"Legal\", \"links\": [\"Privacy\", \"Terms\"] }\n  ],\n  \"style\": {\n    \"backgroundColor\": \"#343a40\",\n    \"color\": \"#ffffff\",\n    \"padding\": \"40px 0\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "An input field for a number, with plus and minus buttons to increment or decrement the value.",
+        "output": "{\n  \"component\": \"input\",\n  \"type\": \"number\",\n  \"controls\": \"stepper\",\n  \"defaultValue\": 0,\n  \"style\": {\n    \"textAlign\": \"center\",\n    \"border\": \"1px solid #ced4da\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "A 'jumbotron' or large banner for calling attention to something.",
+        "output": "{\n  \"component\": \"jumbotron\",\n  \"title\": \"Special Announcement\",\n  \"text\": \"Our new product is now available for pre-order!\",\n  \"style\": {\n    \"backgroundColor\": \"#e9ecef\",\n    \"padding\": \"4rem 2rem\",\n    \"borderRadius\": \"0.3rem\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A tooltip that appears after a short delay when hovering over an element.",
+        "output": "{\n  \"component\": \"tooltip\",\n  \"text\": \"This provides extra information.\",\n  \"trigger\": \"hover\",\n  \"delay\": \"500ms\",\n  \"style\": {\n    \"backgroundColor\": \"#000\",\n    \"color\": \"#fff\",\n    \"borderRadius\": \"4px\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A confirmation dialog with 'Confirm' and 'Cancel' buttons. The 'Confirm' button should be green.",
+        "output": "{\n  \"component\": \"dialog\",\n  \"title\": \"Confirmation\",\n  \"text\": \"Are you sure you want to proceed?\",\n  \"buttons\": [\n    { \"label\": \"Cancel\", \"type\": \"secondary\" },\n    { \"label\": \"Confirm\", \"type\": \"primary\", \"style\": { \"backgroundColor\": \"#28a745\" } }\n  ]\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A card that flips over to reveal more information on the back.",
+        "output": "{\n  \"component\": \"card\",\n  \"interaction\": \"flip\",\n  \"front\": { \"content\": \"Hover to flip\" },\n  \"back\": { \"content\": \"This is the back!\" },\n  \"style\": {\n    \"width\": \"300px\",\n    \"height\": \"200px\"\n  }\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "A set of social media follow buttons for Twitter, Facebook, and Instagram.",
+        "output": "{\n  \"component\": \"social_buttons\",\n  \"platforms\": [\"Twitter\", \"Facebook\", \"Instagram\"],\n  \"style\": {\n    \"iconSize\": \"24px\",\n    \"gap\": \"10px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "A 'well' or inset panel that makes content look like it's sunken into the page.",
+        "output": "{\n  \"component\": \"well\",\n  \"style\": {\n    \"backgroundColor\": \"#f8f9fa\",\n    \"border\": \"1px solid #dee2e6\",\n    \"borderRadius\": \"4px\",\n    \"padding\": \"20px\",\n    \"boxShadow\": \"inset 0 1px 1px rgba(0,0,0,.05)\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "A small, circular button with just a settings (gear) icon in it.",
+        "output": "{\n  \"component\": \"button\",\n  \"type\": \"icon-only\",\n  \"icon\": \"gear\",\n  \"style\": {\n    \"borderRadius\": \"50%\",\n    \"width\": \"40px\",\n    \"height\": \"40px\",\n    \"border\": \"1px solid #ced4da\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A multi-select dropdown where you can choose several options at once.",
+        "output": "{\n  \"component\": \"select\",\n  \"isMultiSelect\": true,\n  \"options\": [\"Option A\", \"Option B\", \"Option C\"],\n  \"style\": {\n    \"border\": \"1px solid #ced4da\",\n    \"padding\": \"10px\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A popover that appears when you click a button, containing more actions.",
+        "output": "{\n  \"component\": \"popover\",\n  \"trigger\": \"click\",\n  \"title\": \"More Actions\",\n  \"content\": \"...\",\n  \"style\": {\n    \"backgroundColor\": \"#ffffff\",\n    \"border\": \"1px solid #dee2e6\",\n    \"boxShadow\": \"0 5px 10px rgba(0,0,0,0.2)\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A simple avatar stack, showing three overlapping circular user avatars.",
+        "output": "{\n  \"component\": \"avatar_stack\",\n  \"count\": 3,\n  \"style\": {\n    \"overlap\": \"-10px\",\n    \"avatar\": {\n      \"borderRadius\": \"50%\",\n      \"border\": \"2px solid #ffffff\"\n    }\n  }\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "A 'call to action' section with a heading, a short paragraph, and a prominent button.",
+        "output": "{\n  \"component\": \"cta_section\",\n  \"heading\": \"Ready to Dive In?\",\n  \"text\": \"Start your free trial today. No credit card required.\",\n  \"button\": { \"label\": \"Sign Up Free\", \"type\": \"primary\" },\n  \"style\": {\n    \"backgroundColor\": \"#007bff\",\n    \"color\": \"#ffffff\",\n    \"padding\": \"60px 20px\",\n    \"textAlign\": \"center\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "An input with a character counter that shows '0/280'.",
+        "output": "{\n  \"component\": \"input\",\n  \"type\": \"textarea\",\n  \"maxLength\": 280,\n  \"features\": [\"character_counter\"],\n  \"style\": {\n    \"border\": \"1px solid #ced4da\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "A 'media object' with an image on the left and text content on the right.",
+        "output": "{\n  \"component\": \"media_object\",\n  \"image\": { \"src\": \"/avatar.jpg\", \"alt\": \"User\" },\n  \"body\": \"This is the text content that describes the media.\",\n  \"style\": {\n    \"display\": \"flex\",\n    \"alignItems\": \"flex-start\",\n    \"gap\": \"15px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A 'skip to main content' link that is only visible to screen readers or when tabbed to.",
+        "output": "{\n  \"component\": \"link\",\n  \"label\": \"Skip to main content\",\n  \"isVisuallyHidden\": true,\n  \"style\": {\n    \"position\": \"absolute\",\n    \"left\": \"-9999px\"\n  },\n  \"focusStyle\": {\n    \"left\": \"10px\",\n    \"top\": \"10px\",\n    \"backgroundColor\": \"#fff\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A button with a sharp, 90-degree corner, no rounding at all.",
+        "output": "{\n  \"component\": \"button\",\n  \"label\": \"Submit\",\n  \"style\": {\n    \"backgroundColor\": \"#333\",\n    \"color\": \"#fff\",\n    \"borderRadius\": \"0px\",\n    \"padding\": \"10px 20px\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A 'stat' card showing a large number '1,234' and a label 'Users Online' underneath.",
+        "output": "{\n  \"component\": \"stat_card\",\n  \"value\": \"1,234\",\n  \"label\": \"Users Online\",\n  \"style\": {\n    \"padding\": \"20px\",\n    \"textAlign\": \"center\",\n    \"border\": \"1px solid #e0e0e0\",\n    \"borderRadius\": \"8px\"\n  }\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "A 'feature list' with an icon, a heading, and a description for each feature.",
+        "output": "{\n  \"component\": \"feature_list\",\n  \"items\": [\n    { \"icon\": \"rocket\", \"heading\": \"Fast\", \"description\": \"Our service is faster than ever.\" },\n    { \"icon\": \"shield-alt\", \"heading\": \"Secure\", \"description\": \"Your data is safe with us.\" }\n  ],\n  \"style\": {\n    \"display\": \"grid\",\n    \"gap\": \"30px\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "A 'drawer' or off-canvas panel that slides in from the right side of the screen.",
+        "output": "{\n  \"component\": \"drawer\",\n  \"position\": \"right\",\n  \"isOpen\": false,\n  \"style\": {\n    \"width\": \"300px\",\n    \"backgroundColor\": \"#ffffff\",\n    \"boxShadow\": \"-2px 0 5px rgba(0,0,0,0.1)\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "A 'skeleton screen' loader for a user profile card, showing grey shapes where content will be.",
+        "output": "{\n  \"component\": \"skeleton_loader\",\n  \"forComponent\": \"card\",\n  \"elements\": [\n    { \"shape\": \"circle\", \"size\": \"48px\" },\n    { \"shape\": \"rectangle\", \"width\": \"60%\", \"height\": \"20px\" },\n    { \"shape\": \"rectangle\", \"width\": \"80%\", \"height\": \"16px\" }\n  ],\n  \"animation\": \"pulse\"\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A 'tree view' for showing a folder structure.",
+        "output": "{\n  \"component\": \"tree_view\",\n  \"nodes\": [\n    { \"label\": \"Folder 1\", \"children\": [{ \"label\": \"File 1.txt\" }] },\n    { \"label\": \"Folder 2\", \"isOpen\": true, \"children\": [{ \"label\": \"Subfolder\", \"children\": [] }] }\n  ]\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A 'hotkey' hint, showing 'Press ? for help'.",
+        "output": "{\n  \"component\": \"hotkey_hint\",\n  \"text\": \"Press ? for help\",\n  \"style\": {\n    \"color\": \"#6c757d\",\n    \"fontSize\": \"12px\",\n    \"textAlign\": \"center\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A 'command palette' like in VS Code or Slack, opened with Ctrl+K.",
+        "output": "{\n  \"component\": \"command_palette\",\n  \"shortcut\": \"Ctrl+K\",\n  \"placeholder\": \"Type a command or search...\",\n  \"style\": {\n    \"backgroundColor\": \"#ffffff\",\n    \"boxShadow\": \"0 10px 30px rgba(0,0,0,0.2)\",\n    \"borderRadius\": \"8px\"\n  }\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "A 'pricing table' with three tiers: Free, Pro, and Enterprise.",
+        "output": "{\n  \"component\": \"pricing_table\",\n  \"tiers\": [\n    { \"name\": \"Free\", \"price\": \"$0\", \"features\": [\"1 User\"] },\n    { \"name\": \"Pro\", \"price\": \"$15\", \"features\": [\"10 Users\"], \"isRecommended\": true },\n    { \"name\": \"Enterprise\", \"price\": \"Contact Us\", \"features\": [\"Unlimited Users\"] }\n  ]\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "A 'drop zone' for a file uploader that highlights when a file is dragged over it.",
+        "output": "{\n  \"component\": \"drop_zone\",\n  \"text\": \"Drop files to upload\",\n  \"style\": {\n    \"border\": \"2px dashed #ced4da\",\n    \"padding\": \"30px\"\n  },\n  \"dragOverStyle\": {\n    \"borderColor\": \"#007bff\",\n    \"backgroundColor\": \"#f0f8ff\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "A 'video player' component with custom controls for play/pause, volume, and fullscreen.",
+        "output": "{\n  \"component\": \"video_player\",\n  \"source\": \"/video.mp4\",\n  \"controls\": [\"playPause\", \"volume\", \"fullscreen\", \"progressBar\"],\n  \"style\": {\n    \"width\": \"100%\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A 'cookie consent' banner at the bottom of the screen with an 'Accept' button.",
+        "output": "{\n  \"component\": \"banner\",\n  \"type\": \"cookie_consent\",\n  \"position\": \"bottom\",\n  \"text\": \"This website uses cookies to ensure you get the best experience.\",\n  \"button\": { \"label\": \"Accept\" },\n  \"style\": {\n    \"backgroundColor\": \"#343a40\",\n    \"color\": \"#ffffff\",\n    \"padding\": \"15px\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "A 'split button' where the left part is the main action and the right part is a dropdown for more actions.",
+        "output": "{\n  \"component\": \"split_button\",\n  \"mainAction\": { \"label\": \"Save\" },\n  \"dropdownActions\": [\"Save as...\", \"Export\"],\n  \"style\": {\n    \"display\": \"inline-flex\"\n  }\n}"
+    },
+    {
+        "instruction": "Convert the following natural language description of a UI component into a JSON object.",
+        "input": "A 'metric' display showing an upward trend with a green arrow icon.",
+        "output": "{\n  \"component\": \"metric\",\n  \"value\": \"+5.2%\",\n  \"label\": \"Monthly Growth\",\n  \"trend\": \"up\",\n  \"style\": {\n    \"color\": \"#28a745\"\n  },\n  \"icon\": {\n    \"name\": \"arrow-up\"\n  }\n}"
+    },
+    {
+        "instruction": "Create a JSON object from this UI description.",
+        "input": "A 'content placeholder' showing a shimmer animation while data is loading.",
+        "output": "{\n  \"component\": \"placeholder\",\n  \"type\": \"content\",\n  \"animation\": \"shimmer\",\n  \"style\": {\n    \"backgroundColor\": \"#e0e0e0\"\n  }\n}"
+    },
+    {
+        "instruction": "Generate the JSON for this component.",
+        "input": "A 'context menu' that appears on right-click.",
+        "output": "{\n  \"component\": \"context_menu\",\n  \"trigger\": \"right-click\",\n  \"items\": [\"Copy\", \"Paste\", \"Cut\"],\n  \"style\": {\n    \"backgroundColor\": \"#ffffff\",\n    \"border\": \"1px solid #ced4da\",\n    \"boxShadow\": \"0 2px 8px rgba(0,0,0,0.15)\"\n  }\n}"
+    },
+    {
+        "instruction": "Describe this UI element as a JSON object.",
+        "input": "A 'color picker' component with a swatch grid and a hex input.",
+        "output": "{\n  \"component\": \"color_picker\",\n  \"features\": [\"swatch_grid\", \"hex_input\"],\n  \"defaultValue\": \"#3498db\"\n}"
+    },
+    {
+        "instruction": "Generate the JSON representation for the following UI component description.",
+        "input": "A 'brutalist' style button with a thick black border and a harsh shadow.",
+        "output": "{\n  \"component\": \"button\",\n  \"label\": \"LAUNCH\",\n  \"style\": {\n    \"backgroundColor\": \"#ffff00\",\n    \"color\": \"#000000\",\n    \"border\": \"2px solid #000000\",\n    \"borderRadius\": \"0\",\n    \"boxShadow\": \"4px 4px 0 #000000\",\n    \"fontWeight\": \"bold\"\n  }\n}"
+    },
+    {
+        "instruction": "Translate this user's request for a UI element into a structured JSON object.",
+        "input": "An 'empty state' message for a list that has no items. It should have an icon, a heading, and a call-to-action button.",
+        "output": "{\n  \"component\": \"empty_state\",\n  \"icon\": \"inbox\",\n  \"heading\": \"No messages yet\",\n  \"text\": \"When you get a new message, it will show up here.\",\n  \"button\": { \"label\": \"Compose Message\" },\n  \"style\": {\n    \"textAlign\": \"center\",\n    \"padding\": \"50px\"\n  }\n}"
     }
 ]
